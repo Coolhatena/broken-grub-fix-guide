@@ -1,5 +1,5 @@
 # broken-grub-fix-guide
-### Disclaimer: This guide is half a rant against W*indows and half a guide made to solve a problem I face often with my Dual Boot installation, if you are using a Linux distro different than Debian probably there will be some small changes, I tried to point out everything that might change in this guide, but I can't cover ALL posible Linux environments.
+### Disclaimer: This guide is half a rant against W*indows and half a guide I made to solve a problem I face often with my Dual Boot installation, if you are using a Linux distro different than Debian probably there will be some small changes, I tried to point out everything that might change in this guide, but I can't cover ALL posible Linux environments.
 
 ## WHAT DO I DO? A WINDOWS UPDATE BROKE MY DUAL BOOT AND NOW MY PC BOOTS DIRECTLY TO WINDOW!
 Welcome to the Dual Boot hell, if you have this kind of Linux/Windows installation you will face this situation at least once (Or five, ten, twenty times...) in a lifetime, but dont worry, your Linux installation, files, and everthing you had is most surely still there, your GRUB its the only thing that is broke, and you can fix it.
@@ -95,4 +95,4 @@ sudo update-grub
 You will see a lot of cool techobabble on the screen, this means your GRUB is available again in your BIOS.
 
 ## STEP 5: ENJOY USING FREE OPEN OS THAT ITS NOT AN INTRUSIVE SELFISH PIECE OF TRASH SOFTWARE
-Depending on your computer and much your W*ndows installation messed with your boot and BIOS, you may have to do some extra tinkering, but that totally depends on your PC, in my case i require some extra BIOS trick to revive my system but i will omit that in this guide because its not Linux related.
+Depending on your computer and much your W*ndows installation messed with your boot and BIOS, you may have to do some extra tinkering, but that totally depends on your PC, in my case i require some extra BIOS tricks to revive my system but i will omit that in this guide because its not Linux related.
