@@ -53,6 +53,10 @@ Then, you have to mount your system efivars, this may not be necesary for everyo
 ```
 sudo mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 ```
+Note: The command uses `efivarfs` for the file system type and `efivars` for the path name, make sure you don't mess this up, in case you mounted it wrong you can use this command to unmount it and try again:
+```
+sudo umount /sys/firmware/efi/efivars    # Do not use this command if your typed everything correctly.
+```
 
 ## STEP 4: REGENERATE YOUR GRUB
 Once everything is mounted, run this to access to your mounted root folder as root user:
