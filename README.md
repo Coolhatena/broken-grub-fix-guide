@@ -94,5 +94,5 @@ sudo update-grub
 ```
 You will see a lot of cool techobabble on the screen, this means your GRUB is available again in your BIOS.
 
-## STEP 5: ENJOY USING FREE OPEN OS THAT ITS NOT AN INTRUSIVE SELFISH PIECE OF TRASH SOFTWARE
-Depending on your computer and much your W*ndows installation messed with your boot and BIOS, you may have to do some extra tinkering, but that totally depends on your PC, in my case i require some extra BIOS tricks to revive my system but i will omit that in this guide because its not Linux related.
+## STEP 5: ENJOY USING A FREE OPEN OS THAT ITS NOT AN INTRUSIVE SELFISH PIECE OF TRASH SOFTWARE
+Depending on your computer and how much your W*ndows installation messed with your boot and BIOS, you may have to do some extra tinkering, but that totally depends on your PC, in my case i require some extra BIOS tricks to revive my system but i will omit that in this guide because its not Linux related.
