@@ -5,9 +5,9 @@
 Welcome to the Dual Boot hell, if you have this kind of Linux/Windows installation you will face this situation at least once (Or five, ten, twenty times...) in a lifetime, but dont worry, your Linux installation, files, and everthing you had is most surely still there, your GRUB its the only thing that is broke, and you can fix it.
 
 ## STEP 1: GET A LIVE USB OF YOUR LINUX DISTRO
-We have to use a live usb to get access to a linux terminal capable of manipulating our system files, we are NOT going to reinstall the OS (You can do it, but the whole purpose of reading this guide is to get back your linux installation, so it would be kind of pointless)
+We have to use a live USB to get access to a Linux terminal capable of manipulating our system files, we are NOT going to reinstall the OS (You can do it, but the whole purpose of reading this guide is to get back your Linux installation, so it would be kind of pointless)
 
-Once inside the live OS, do all the setup you need to use it confortably and open a terminal.
+Once inside the live OS, do all the setup you need to use it comfortably and open a terminal.
 
 ## STEP 2: IDENTIFY YOUR DRIVES
 I currently have my dual boot in two separate drives, but this guide should help you even if you have both OS in a single drive.
@@ -29,8 +29,8 @@ nvme1n1     259:0    0  500G  0 disk
 
 You have to identify which partitions belong to your Linux install, in a standard installation you should have at least 3 partitions:
 * A FAT32 partition: This is where your efi boot is installed.
-* A ext4 partition: This is where your root `/` is installed, basically all your Linux OS.
-* A swap partition: This partition is kind of irrelevant for the steps on this guide, but it can help your identify your Linux drive/partitions.
+* A EXT4 partition: This is where your root `/` is installed, basically all your Linux OS.
+* A SWAP partition: This partition is kind of irrelevant for the steps on this guide, but it can help your identify your Linux drive/partitions.
 
 In my PC, my root is `nvme1n1p2` and my boot is `nvme1n1p3`, you have to adapt the following commands to your particular partitions. 
 
