@@ -96,3 +96,9 @@ You will see a lot of cool techobabble on the screen, this means your GRUB is av
 
 ## STEP 5: ENJOY USING A FREE OPEN OS THAT ITS NOT AN INTRUSIVE SELFISH PIECE OF TRASH SOFTWARE
 Depending on your computer and how much your W*ndows installation messed with your boot and BIOS, you may have to do some extra tinkering, but that totally depends on your PC, in my case i require some extra BIOS tricks to revive my system but i will omit that in this guide because its not Linux related.
+
+I understand that, if you are using Dual Boot, you must have some ulterior motive to keep using that damn Microsoft OS, and after this recovery process W*ndows could not appear on the GRUB menu, dont worry. 
+Once you have access to you Linux OS again, use `sudo update-grub` in your terminal again and you will see how your GRUB automatically detects you OS installations.
+```
+sudo update-grub
+```
