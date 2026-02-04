@@ -32,19 +32,19 @@ You have to identify which partitions belong to your Linux install, in a standar
 * A EXT4 partition: This is where your root `/` is installed, basically all your Linux OS.
 * A SWAP partition: This partition is kind of irrelevant for the steps on this guide, but it can help your identify your Linux drive/partitions.
 
-In my PC, my root is `nvme1n1p2` and my boot is `nvme1n1p3`, you have to adapt the following commands to your particular partitions. 
+In my PC, my root is `nvme1n1p3` and my boot is `nvme1n1p1`, you have to adapt the following commands to your particular partitions. 
 
 ## STEP 3: MOUNT THE NEEDED SYSTEM FOLDERS
 Now that you know exactly where are your Linux files, use the following commands to mount the necesary folders.
 
-REMINDER: my root is `nvme1n1p2` and my boot is `nvme1n1p3`, change them depending on what your `lsblk -f` output was.
+REMINDER: my root is `nvme1n1p3` and my boot is `nvme1n1p1`, change them depending on what your `lsblk -f` output was.
 
 ```
-sudo mount /dev/nvme0n1p2 /mnt
+sudo mount /dev/nvme1n1p3 /mnt
 sudo mount --bind /dev /mnt/dev
 sudo mount --bind /proc /mnt/proc
 sudo mount --bind /sys /mnt/sys
-sudo mount /dev/nvme0n1p1 /mnt/boot/efi
+sudo mount /dev/nvme1n1p1 /mnt/boot/efi
 sudo mount -t devpts devpts /mnt/dev/pts
 ```
 
@@ -56,6 +56,12 @@ sudo mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 Note: The command uses `efivarfs` for the file system type and `efivars` for the path name, make sure you don't mess this up, in case you mounted it wrong you can use this command to unmount it and try again:
 ```
 sudo umount /sys/firmware/efi/efivars    # Do not use this command if your typed everything correctly.
+```
+
+Sometimes, when you try to mount  `/sys/firmware/efi/efivars`, you will get an alert saying that it is already mounted, for some reason, when its already mounted it usually doesn't work, I recommend using `umount` and mount it manually if that's the case
+```
+sudo umount /sys/firmware/efi/efivars
+sudo mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 ```
 
 ## STEP 4: REGENERATE YOUR GRUB
